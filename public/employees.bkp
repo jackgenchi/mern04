@@ -1,4 +1,4 @@
-//import EmployeeAdd from './EmployeeAdd.js'
+import EmployeeAdd from './EmployeeAdd.js';
 class EmployeeFilter extends React.Component {
   render() {
     return /*#__PURE__*/React.createElement("div", null, "This is a placheholder for the employee filter");
@@ -22,47 +22,6 @@ function EmployeeRow(props) {
   return /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("td", null, props.employee.name), /*#__PURE__*/React.createElement("td", null, props.employee.extension), /*#__PURE__*/React.createElement("td", null, props.employee.email), /*#__PURE__*/React.createElement("td", null, props.employee.title), /*#__PURE__*/React.createElement("td", null, props.employee.dateHired.toDateString()), /*#__PURE__*/React.createElement("td", null, props.employee.currentlyEmployed ? 'Yes' : 'No'), /*#__PURE__*/React.createElement("td", null, /*#__PURE__*/React.createElement("button", {
     onClick: onDeleteClick
   }, "DELETE")));
-}
-class EmployeeAdd extends React.Component {
-  constructor() {
-    super();
-    this.handleSubmit = this.handleSubmit.bind(this);
-    // this.props.createEmployee(sampleEmployee)
-  }
-  handleSubmit(e) {
-    e.preventDefault();
-    const form = document.forms.employeeAdd;
-    const employee = {
-      name: form.name.value,
-      extension: form.ext.value,
-      email: form.email.value,
-      title: form.title.value
-    };
-    this.props.createEmployee(employee);
-    form.name.value = '';
-    form.ext.value = '';
-    form.email.value = '';
-    form.title.value = '';
-  }
-  render() {
-    return /*#__PURE__*/React.createElement("form", {
-      name: "employeeAdd",
-      onSubmit: this.handleSubmit
-    }, "Name: ", /*#__PURE__*/React.createElement("input", {
-      type: "text",
-      name: "name"
-    }), /*#__PURE__*/React.createElement("br", null), "Extension: ", /*#__PURE__*/React.createElement("input", {
-      type: "text",
-      name: "ext",
-      maxLength: 4
-    }), /*#__PURE__*/React.createElement("br", null), "Email: ", /*#__PURE__*/React.createElement("input", {
-      type: "text",
-      name: "email"
-    }), /*#__PURE__*/React.createElement("br", null), "Title: ", /*#__PURE__*/React.createElement("input", {
-      type: "text",
-      name: "title"
-    }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("button", null, "Add here"));
-  }
 }
 
 //Module 02-03 https://www.youtube.com/watch?v=PqN-ruBuSFY
