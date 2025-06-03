@@ -67,7 +67,7 @@ export default class EmployeeList extends React.Component { // creates class com
         fetch('/api/employees') // api call
         .then(response=> response.json()) //get data and store as json
         .then(data => { //iterate
-            console.log(`data: ${data}`)
+            //console.log(`data: ${data}`)
             //console.log('Total count of employees: ', data.count)
             data.employees.forEach(employee => {
                 employee.dateHired = new Date(employee.dateHired) //convert string date into int date using date function

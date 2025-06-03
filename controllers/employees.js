@@ -1,5 +1,5 @@
 import Employee from '../models/Employee.js'
-import retrieveAll, {} from '../demos/retrieve-all.js'
+//import retrieveAll, {} from '../demos/retrieve-all.js'
 
 const getAllEmployees = async (req, res) => {
     console.log("running getAllEmployees function")
